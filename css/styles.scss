@@ -53,6 +53,11 @@ main {
 
 .main-container {
 
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+  gap: 5em;
+
   background-color: var(--main-color);
   min-height: 10vh;
   border: 5px solid white;
