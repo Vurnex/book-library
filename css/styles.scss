@@ -2,6 +2,7 @@ html {
 
   --bg-color: #000000;
   --nav-color: #6e0f0f;
+  --main-color: #b3afaf;
 }
 
 body {
@@ -14,11 +15,9 @@ nav {
 
   justify-content: space-between;
   align-items: center;
-  position: fixed;
   min-height: 10vh;
   width: 100%;
   padding-top: 1em;
-  z-index: 1;
   background-color: var(--nav-color);
 
   ul {
@@ -43,4 +42,21 @@ nav {
     text-decoration: none;
     font-weight: bold;
   }
+}
+
+main {
+
+  display: flex;
+  justify-content: center;
+  margin-top: 5em;
+}
+
+.main-container {
+
+  background-color: var(--main-color);
+  min-height: 10vh;
+  border: 5px solid white;
+  border-radius: 5px;
+  width: 60%;
+  padding: 2em;
 }
