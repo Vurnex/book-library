@@ -1,0 +1,37 @@
+html {
+  --bg-color: #000000;
+  --nav-color: #6e0f0f;
+}
+
+body {
+  background-color: var(--bg-color) !important;
+  color: white;
+}
+
+nav {
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  min-height: 10vh;
+  width: 100%;
+  padding-top: 1em;
+  z-index: 1;
+  background-color: var(--nav-color);
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  color: white;
+}
+nav ul > li {
+  display: inline-block;
+}
+nav ul > li > a {
+  font-size: 1.3rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}/*# sourceMappingURL=styles.css.map */
