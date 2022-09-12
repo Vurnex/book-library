@@ -1,5 +1,13 @@
 let myLibrary = [];
 
+function getInputs() {
+
+    const newTitle = document.getElementById('#bookTitle').value;
+    const newAuthor = document.getElementById('#bookAuthor').value;
+    const newPageNum = document.getElementById('#pageNum').value;
+    const newReadStatus = document.getElementById('#flexSwitchCheckDefault').checked;
+}
+
 function Book(title, author, pages, read) {
 
     this.title = title;

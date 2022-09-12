@@ -35,6 +35,12 @@ nav ul > li > a {
   font-weight: bold;
 }
 
+.readCheck {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
 main {
   display: flex;
   justify-content: center;
