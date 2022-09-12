@@ -1,12 +1,21 @@
 let myLibrary = [];
 
-function getInputs() {
+document.getElementById('submit-btn').addEventListener("click", function() {
 
-    const newTitle = document.getElementById('#bookTitle').value;
-    const newAuthor = document.getElementById('#bookAuthor').value;
-    const newPageNum = document.getElementById('#pageNum').value;
-    const newReadStatus = document.getElementById('#flexSwitchCheckDefault').checked;
-}
+    const newTitle = document.getElementById('bookTitle').value;
+    const newAuthor = document.getElementById('bookAuthor').value;
+    const newPageNum = document.getElementById('pageNum').value;
+    const newReadStatus = document.getElementById('flexSwitchCheckDefault').checked;
+
+    //console.log(newTitle + "\n" + newAuthor + "\n" + newPageNum + "\n" + newReadStatus)
+
+    const nextBook = new Book(newTitle, newAuthor, newPageNum, newReadStatus);
+
+    console.log(nextBook);
+
+    addBooksToLibrary(nextBook);
+
+ });
 
 function Book(title, author, pages, read) {
 
@@ -17,10 +26,9 @@ function Book(title, author, pages, read) {
 
 }
 
-const nextBook = new Book('New Title', 'New Author', 100, false);
+function addBooksToLibrary(nextBook) {
 
+    myLibrary.push(nextBook);
 
-function addBooksToLibrary() {
-
-
+    console.table(myLibrary);
 }
