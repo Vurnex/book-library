@@ -20,6 +20,22 @@ document.getElementById('submit-btn').addEventListener("click", function() {
 
 });
 
+document.addEventListener('click', function(e) {
+
+    if(e.target && e.target.id== 'readButton') {
+          alert("Test");
+          e.target.classList.toggle("crossmark");
+          e.target.classList.toggle("checkmark");
+     }
+ });
+
+ document.addEventListener('click', function(e) {
+
+    if(e.target && e.target.id== 'removeButton') {
+          alert("Test Rem");
+     }
+ });
+
 function Book(title, author, description, pages, read) {
 
     this.title = title;
@@ -87,12 +103,14 @@ function addCards(newBook) {
 
     buttonContainer.classList.add("btn-container");
 
-    firstButton.classList.add("btn", "btn-primary");
+    firstButton.classList.add("btn", "btn-primary", "cross-mark");
     firstButton.setAttribute("href", "#");
-    firstButton.textContent = "Read (x)";
+    firstButton.setAttribute("id", "readButton");
+    firstButton.textContent = "Read";
 
     secondButton.classList.add("btn", "btn-primary");
     secondButton.setAttribute("href", "#");
+    secondButton.setAttribute("id", "removeButton");
     secondButton.textContent = "Remove";
 
     header.textContent = newBook.title;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   --bg-color: #000000;
   --nav-color: #6e0f0f;
@@ -68,4 +69,14 @@ main {
   display: flex;
   justify-content: center;
   gap: 1em;
+}
+
+.cross-mark::after {
+  margin-left: 5px;
+  content: "❌";
+}
+
+.checkmark::after {
+  margin-left: 5px;
+  content: "✔";
 }/*# sourceMappingURL=styles.css.map */

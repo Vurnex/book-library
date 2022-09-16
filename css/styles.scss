@@ -84,3 +84,16 @@ main {
   justify-content: center;
   gap: 1em;
 }
+
+.cross-mark::after {
+
+  margin-left: 5px;
+  content: "\274C";
+}
+
+.checkmark::after {
+
+  margin-left: 5px;
+  content: "\2714";
+
+}
