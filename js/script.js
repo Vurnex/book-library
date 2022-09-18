@@ -10,11 +10,7 @@ document.getElementById('submit-btn').addEventListener("click", function() {
     const newPageNum = document.getElementById('pageNum').value;
     const newReadStatus = document.getElementById('flexSwitchCheckDefault').checked;
 
-    //console.log(newTitle + "\n" + newAuthor + "\n" + newPageNum + "\n" + newReadStatus)
-
     const nextBook = new Book(newTitle, newAuthor, newBkDesc, newPageNum, newReadStatus);
-
-    //console.log(nextBook);
 
     addBooksToLibrary(nextBook);
 
@@ -23,8 +19,6 @@ document.getElementById('submit-btn').addEventListener("click", function() {
 document.addEventListener('click', function(e) {
 
     if(e.target && e.target.id== 'readButton') {
-          alert("Test");
-          e.target.classList.toggle("crossmark");
           e.target.classList.toggle("checkmark");
      }
  });
@@ -32,7 +26,8 @@ document.addEventListener('click', function(e) {
  document.addEventListener('click', function(e) {
 
     if(e.target && e.target.id== 'removeButton') {
-          alert("Test Rem");
+          e.target.parentElement.parentElement.parentElement.remove();
+          myLibrary.pop();
      }
  });
 
@@ -75,8 +70,6 @@ function addCards(newBook) {
     let firstButton = document.createElement('a');
     let secondButton = document.createElement('a');
 
-    const getReadStatus = document.getElementById('flexSwitchCheckDefault').checked;
-
     //Add child elements to card
 
     cardContainer.appendChild(firstElement);
@@ -118,9 +111,9 @@ function addCards(newBook) {
     secondPara.textContent = newBook.description;
     thirdPara.textContent = newBook.pages;
 
-    if (getReadStatus == true) {
+    if (newBook.read == true) {
 
-        firstButton.textContent = "Read (Y)";
+        firstButton.classList.add("checkmark");
     }
 
 }
