@@ -1,3 +1,15 @@
+class Book {
+
+    constructor(title, author, description, pages, read) {
+
+        this.title = title;
+        this.author = author;
+        this.description = description;
+        this.pages = pages;
+        this.read = read;
+    }
+}
+
 let myLibrary = [];
 
 let cardContainer = document.getElementById("container-main");
@@ -31,6 +43,7 @@ document.addEventListener('click', function(e) {
      }
  });
 
+/*
 function Book(title, author, description, pages, read) {
 
     this.title = title;
@@ -39,7 +52,7 @@ function Book(title, author, description, pages, read) {
     this.pages = pages;
     this.read = read;
 
-}
+}*/
 
 function addBooksToLibrary(nextBook) {
 
